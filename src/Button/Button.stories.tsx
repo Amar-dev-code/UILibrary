@@ -1,0 +1,24 @@
+import { ComponentStory, ComponentMeta } from '@storybook/react';
+
+import { Button } from './Button';
+
+export default {
+  title: 'Example/Button',
+  component: Button,
+} as ComponentMeta<typeof Button>;
+
+const Template: ComponentStory<typeof Button> = (args) => <Button {...args} />;
+
+export const Primary = Template.bind({});
+Primary.args = {
+  buttonLabel: 'Sign In',
+  buttonStyles:"btn--success--solid",
+};
+
+
+export const Disabled = Template.bind({});
+Disabled.args = {
+  buttonLabel: 'Submit',
+  buttonStyles:"btn--success--solid",
+  disabled:true
+};
