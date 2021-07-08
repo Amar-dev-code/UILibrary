@@ -1,0 +1,11 @@
+.btn--small {
+    padding: 5px 10px;
+    font-size: 9px;
+    width:250px;
+  }
+  .btn--medium {
+     padding: 7px 17px;
+  }
+  .btn--large {
+    width:250px;
+  }
