@@ -1,4 +1,3 @@
-import { title } from "process";
 import { AccordionItem } from "./AccordionItem";
 import "./styles.css";
 
@@ -28,13 +27,9 @@ export function Accordion() {
 
   return (
     <>
-      {testingData.map((item) => {
-        return (
-          <div>
-            <AccordionItem title={item.title} content={item.content} />
-          </div>
-        );
-      })}
+      <div>
+        <AccordionItem title="What is Netflix?" content="Hello World!" />
+      </div>
     </>
   );
 }

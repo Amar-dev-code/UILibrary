@@ -15,11 +15,9 @@ export function AccordionItem(props: AccordionProps) {
   }
 
   return (
-    <div className="accordion">
-      <div className="accordion-title" onClick={() => openClose()}>
-        {props.title}
-      </div>
-      {open && <div className="accordion-content">{props.content}</div>}
+    <div className="title">
+      <div>{props.title}</div>
+      <div>+</div>
     </div>
   );
 }
