@@ -1,23 +1,44 @@
 import { useState } from "react";
 import "./styles.css";
-
-interface AccordionProps {
+import { Close } from "../Icons/Close";
+import { Open } from "../Icons/Open";
+export interface AccordionItems {
   title: string;
-  content: string;
+  content: string[];
 }
-export function AccordionItem(props: AccordionProps) {
-  console.log("Sonali");
+export function AccordionItem(props: AccordionItems) {
   const [open, setOpen] = useState<boolean>(false);
-
+  const { title, content } = props;
+  console.log(content);
   function openClose() {
     if (open) setOpen(false);
     else setOpen(true);
   }
-
   return (
-    <div className="title">
-      <div>{props.title}</div>
-      <div>+</div>
+    <div className="accordion">
+      <div className="title" onClick={() => openClose()}>
+        <div>{title}</div>
+        {!open ? (
+          <div className="icon">
+            <Open />
+          </div>
+        ) : (
+          <div className="icon">
+            <Close />
+          </div>
+        )}
+      </div>
+      {open && (
+        <div className="content">
+          {content?.map((item, index) => {
+            return (
+              <div className="text">
+                <span>{item}</span>
+              </div>
+            );
+          })}
+        </div>
+      )}
     </div>
   );
 }

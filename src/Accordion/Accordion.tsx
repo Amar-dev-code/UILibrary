@@ -1,35 +1,16 @@
 import { AccordionItem } from "./AccordionItem";
 import "./styles.css";
+import { AccordionItems } from "./AccordionItem";
 
-export function Accordion() {
-  const testingData = [
-    {
-      title: "Section 1",
-      content: "Hello World!",
-    },
-    {
-      title: "Section 1",
-      content: "Hello World!",
-    },
-    {
-      title: "Section 1",
-      content: "Hello World!",
-    },
-    {
-      title: "Section 1",
-      content: "Hello World!",
-    },
-    {
-      title: "Section 1",
-      content: "Hello World!",
-    },
-  ];
-
+interface AccordionProps {
+  data: AccordionItems[];
+}
+export function Accordion(props: AccordionProps) {
   return (
     <>
-      <div>
-        <AccordionItem title="What is Netflix?" content="Hello World!" />
-      </div>
+      {props.data.map((item) => {
+        return <AccordionItem title={item.title} content={item.content} />;
+      })}
     </>
   );
 }
