@@ -1,0 +1,23 @@
+.accordion {
+  height: 120px;
+  width: 700px;
+}
+.accordion-title {
+  display: flex;
+  width: 700px;
+  height: 60px;
+  background-color: black;
+  color: white;
+  align-items: center;
+  font-size: 30px;
+  cursor: pointer;
+  position: sticky;
+}
+.accordion-content {
+  width: 700px;
+  height: 60px;
+  background-color: black;
+  color: white;
+  align-items: center;
+  font-size: 25px;
+}
