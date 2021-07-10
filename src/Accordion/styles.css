@@ -1,0 +1,39 @@
+.accordion {
+  margin-bottom: 3px;
+  background-color: black;
+  width: 815px;
+}
+.title {
+  position: relative;
+  display: flex;
+  width: 815px;
+  box-sizing: border-box;
+  padding: 21px 57px 21px 21px;
+  font-weight: 400;
+  background-color: #303030;
+  font-size: 26px;
+  color: white;
+  justify-content: space-between;
+  cursor: pointer;
+}
+.content {
+  border-top: 1px solid black;
+  position: relative;
+}
+.text {
+  width: 815px;
+  box-sizing: border-box;
+  padding: 21px 57px 21px 21px;
+  font-weight: 400;
+  background-color: #303030;
+  font-size: 25px;
+  color: white;
+  display: flex;
+  text-align: left;
+}
+.icon {
+  fill: #fff;
+  height: 1em;
+  width: 1em;
+  top: 50%;
+}
