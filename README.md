@@ -10,5 +10,5 @@
 
 <h2> Deployment </h2>
 
-***This site is built uisng [Chromatic](https://www.chromatic.com/)***
+***This site is built using [Chromatic](https://www.chromatic.com/)***
 
