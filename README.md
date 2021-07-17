@@ -4,6 +4,11 @@
 
 <h2> Component List </h2>
 
-1. **Button**
-2. **TextBox**
-3. **Accordion**
+1. **Accordion**
+2. **Button**
+3. **TextBox**
+
+<h2> Deployment </h2>
+
+***This site is built uisng [Chromatic](https://www.chromatic.com/)***
+
