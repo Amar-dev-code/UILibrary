@@ -1,7 +1,5 @@
 import "./sizes.css";
 import "./styles.css";
-//import { useBreakpoint } from "../hooks/useBreakpoint";
-//const search = require("../images/search.png");
 
 interface buttonProps {
   href?: string;
@@ -32,12 +30,12 @@ export const Button = (props: buttonProps) => {
     : styles[0];
 
   let checkButtonLabel = props.buttonLabel;
-  let buttonSize=sizes[0];
-  
+  let buttonSize = sizes[0];
+
   props.disabled
     ? (checkButtonStyle = "btn--primary--disabled") &&
       (checkButtonLabel = "Submit")
-    : checkButtonStyle="btn--success--solid";
+    : (checkButtonStyle = "btn--success--solid");
 
   return (
     <a
