@@ -1,24 +1,15 @@
 import "./styles.css";
 
 interface textboxProps {
-  isDisabled?: boolean;
-  placeholder?: string;
-  isAutoFocus?: boolean;
-  isReadonly?: boolean;
+  placeholder: string;
   type: "Password" | "Text";
-  value?: string | number | readonly string[];
 }
 
 export function TextBox(props: textboxProps) {
   return (
     <div>
-      <input
-        className="inputText"
-        type="Text"
-        disabled={props.isDisabled}
-        required={true}
-      />
-      <span className="floating-label">Email address</span>
+      <input className="inputText" type={props.type} required={true} />
+      <span className="floating-label">{props.placeholder}</span>
     </div>
   );
 }

@@ -1,15 +1,24 @@
-import { ComponentStory, ComponentMeta } from '@storybook/react';
+import { ComponentStory, ComponentMeta } from "@storybook/react";
 
-import { TextBox } from './TextBox';
+import { TextBox } from "./TextBox";
 
 export default {
-  title: 'Example/Text',
+  title: "Example/Text",
   component: TextBox,
 } as ComponentMeta<typeof TextBox>;
 
-const Template: ComponentStory<typeof TextBox> = (args) => <TextBox {...args} />;
+const Template: ComponentStory<typeof TextBox> = (args) => (
+  <TextBox {...args} />
+);
 
 export const Primary = Template.bind({});
 Primary.args = {
-  type:"Text"
+  type: "Text",
+  placeholder: "Email Address",
+};
+
+export const Password = Template.bind({});
+Password.args = {
+  type: "Password",
+  placeholder: "Password",
 };
